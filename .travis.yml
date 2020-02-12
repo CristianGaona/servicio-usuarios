@@ -20,6 +20,7 @@ addons:
       secure: $SONAR_TOKEN
       
 before_install:
+  - chmod +x mvnw
   - ./mvnw clean install -B
   - ./mvnw clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
   
