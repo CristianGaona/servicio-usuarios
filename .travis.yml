@@ -7,6 +7,8 @@ services:
   
 env:
   global: 
+  - secure: "encrypted-dockerhub-username"
+  - secure: "encrypted-dockerhub-password"
   - secure: "encrypted-heroku-api-key"
   - COMMIT=${TRAVIS_COMMIT::7}
   
