@@ -15,25 +15,27 @@ env:
       
 before_install:
   - chmod +x mvnw
+  - wget -qO- https://toolbelt.heroku.com/install.sh | sh
+  - echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+  - echo "$HEROKU_PASSWORD" | docker login -u "$HEROKU_USERNAME" --password-stdin registry.heroku.com
  
 script: 
   - ./mvnw clean install -B
+  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH; fi`
+  - export IMAGE_NAME=crisda24/sersuarios
+  - docker build -t $IMAGE_NAME:$COMMIT .
+  - docker tag $IMAGE_NAME:$COMMIT $IMAGE_NAME:$TAG
+  - registry.heroku.com/$HEROKU_APP_NAME/usuarios
   
-cache:
+cache: 
   directories:
     - '$HOME/.m2/repository'
   
-
-after_success:
-- docker login -u $DOCKER_USER -p $DOCKER_PASS
-- export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH; fi`
-- export IMAGE_NAME=crisda24/sersuarios
-- docker build -t $IMAGE_NAME:$COMMIT .
-- docker tag $IMAGE_NAME:$COMMIT $IMAGE_NAME:$TAG
-- docker push $IMAGE_NAME
-
 deploy:
-  provider: heroku
-  api_key: $HEROKU_API_KEY
-  app: app-usuarios-service
+  provider: script
+  script:
+    - docker push $IMAGE_NAME 
+     registry.heroku.com/$HEROKU_APP_NAME/usuarios
+  on: 
+    branch: master
   
