@@ -23,11 +23,11 @@ public class Usuario implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(unique = true, length = 20)
+	/*@Column(unique = true, length = 20)
 	private String username;
 
 	@Column(length = 60)
-	private String password;
+	private String password;*/
 	//private Boolean enabled;
 	private String nombre;
 	private String apellido;
@@ -59,7 +59,7 @@ public class Usuario implements Serializable {
 		this.id = id;
 	}
 
-	public String getUsername() {
+	/*public String getUsername() {
 		return username;
 	}
 
@@ -73,7 +73,7 @@ public class Usuario implements Serializable {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
+	}*/
 
 	public String getNombre() {
 		return nombre;
