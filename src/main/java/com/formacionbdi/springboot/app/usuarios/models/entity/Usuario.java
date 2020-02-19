@@ -34,7 +34,7 @@ public class Usuario implements Serializable {
 
 	
 	//Column(unique = true, length = 100)
-	private String email;
+	//private String email;
 
 	private String  url;
 	
@@ -91,13 +91,13 @@ public class Usuario implements Serializable {
 		this.apellido = apellido;
 	}
 
-	public String getEmail() {
+	/*public String getEmail() {
 		return email;
 	}
 
 	public void setEmail(String email) {
 		this.email = email;
-	}
+	}*/
 	
 	  public String getUrl() {
 	        return url;
