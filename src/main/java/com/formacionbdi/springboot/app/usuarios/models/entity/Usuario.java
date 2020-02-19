@@ -27,7 +27,7 @@ public class Usuario implements Serializable {
 	private String username;
 
 	//@Column(length = 60)
-	private String password;
+	//private String password;
 	//private Boolean enabled;
 	private String nombre;
 	private String apellido;
@@ -67,13 +67,13 @@ public class Usuario implements Serializable {
 		this.username = username;
 	}
 
-	public String getPassword() {
+	/*public String getPassword() {
 		return password;
 	}
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
+	}*/
 
 	public String getNombre() {
 		return nombre;
