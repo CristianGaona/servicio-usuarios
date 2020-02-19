@@ -1,1 +1,5 @@
-INSERT INTO `usuarios` (nombre, apellido) VALUES ('Cristian', 'Gaona');
+INSERT INTO `usuarios` (username, password,  nombre, apellido, email, url) VALUES ('crisda', '12345', 'Cristian', 'Gaona', 'crgaonas24@gmail.com', 'https://image.flaticon.com/icons/png/512/401/401156.png');
+INSERT INTO `usuarios` (username, password,  nombre, apellido, email, url) VALUES ('sebas', '12345', 'Sebastian', 'Gaona', 'asgaonac21@gmail.com', 'https://image.flaticon.com/icons/png/512/1503/1503126.png');
+INSERT INTO `usuarios` (username, password,  nombre, apellido, email, url) VALUES ('manu22', '12345', 'Manuel', 'Ruiz', 'maruiz22@gmail.com', 'https://image.flaticon.com/icons/png/512/1503/1503126.png');
+INSERT INTO `usuarios` (username, password,  nombre, apellido, email, url) VALUES ('majo23', '12345', 'María', 'Sanchez', 'masanchez23@gmail.com', 'https://image.flaticon.com/icons/png/512/1503/1503126.png');
+INSERT INTO `usuarios` (username, password,  nombre, apellido, email, url) VALUES ('andre25', '12345','Andrea', 'Cruz', 'ancruz25@gmail.com', 'https://image.flaticon.com/icons/png/512/1503/1503126.png');
