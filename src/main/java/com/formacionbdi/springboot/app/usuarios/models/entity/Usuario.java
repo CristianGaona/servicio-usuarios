@@ -38,18 +38,18 @@ public class Usuario implements Serializable {
 
 	private String  url;
 	
-	@ManyToMany(fetch = FetchType.LAZY)
+	/*@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name="usuarios_roles", joinColumns = @JoinColumn(name="usuario_id"), inverseJoinColumns = @JoinColumn(name="rol_id"), uniqueConstraints = {@UniqueConstraint(columnNames = {"usuario_id", "rol_id"})})
-	private List<Rol> roles;
+	private List<Rol> roles;*/
 	
 	
-	public List<Rol> getRoles() {
+	/*public List<Rol> getRoles() {
 		return roles;
 	}
 
 	public void setRoles(List<Rol> roles) {
 		this.roles = roles;
-	}
+	}*/
 
 	public Long getId() {
 		return id;
