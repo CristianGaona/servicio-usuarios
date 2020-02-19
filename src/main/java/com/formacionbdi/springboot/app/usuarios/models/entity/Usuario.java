@@ -33,10 +33,10 @@ public class Usuario implements Serializable {
 	private String apellido;
 
 	
-	@Column(unique = true, length = 100)
+	/*@Column(unique = true, length = 100)
 	private String email;
 
-	private String  url;
+	private String  url;*/
 	
 	/*@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name="usuarios_roles", joinColumns = @JoinColumn(name="usuario_id"), inverseJoinColumns = @JoinColumn(name="rol_id"), uniqueConstraints = {@UniqueConstraint(columnNames = {"usuario_id", "rol_id"})})
@@ -91,7 +91,7 @@ public class Usuario implements Serializable {
 		this.apellido = apellido;
 	}
 
-	public String getEmail() {
+	/*public String getEmail() {
 		return email;
 	}
 
@@ -105,7 +105,7 @@ public class Usuario implements Serializable {
 
 	    public void setUrl(String url) {
 	        this.url = url;
-	    }
+	    }*/
 
 	private static final long serialVersionUID = 4002221912401133094L;
 
