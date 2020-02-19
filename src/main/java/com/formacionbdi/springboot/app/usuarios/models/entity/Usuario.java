@@ -32,9 +32,11 @@ public class Usuario implements Serializable {
 	private String nombre;
 	private String apellido;
 
+	
 	@Column(unique = true, length = 100)
 	private String email;
 
+	private String  url;
 	
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name="usuarios_roles", joinColumns = @JoinColumn(name="usuario_id"), inverseJoinColumns = @JoinColumn(name="rol_id"), uniqueConstraints = {@UniqueConstraint(columnNames = {"usuario_id", "rol_id"})})
@@ -96,6 +98,14 @@ public class Usuario implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	  public String getUrl() {
+	        return url;
+	    }
+
+	    public void setUrl(String url) {
+	        this.url = url;
+	    }
 
 	private static final long serialVersionUID = 4002221912401133094L;
 
