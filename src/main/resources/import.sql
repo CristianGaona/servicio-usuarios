@@ -2,4 +2,4 @@ INSERT INTO `usuarios` (username,   nombre, apellido, email, url) VALUES ('crisd
 INSERT INTO `usuarios` (username,   nombre, apellido, email, url) VALUES ('sebas', 'Sebastian', 'Gaona', 'asgaonac21@gmail.com', 'https://www.stickpng.com/assets/images/585e4bd7cb11b227491c3397.png');
 INSERT INTO `usuarios` (username,   nombre, apellido, email, url) VALUES ('manu22', 'Manuel', 'Ruiz', 'maruiz22@gmail.com', 'https://image.flaticon.com/icons/png/512/1503/1503126.png');
 INSERT INTO `usuarios` (username,   nombre, apellido, email, url) VALUES ('majo23',  'María', 'Sanchez', 'masanchez23@gmail.com', 'https://image.flaticon.com/icons/png/512/1503/1503126.png');
-INSERT INTO `usuarios` (username,   nombre, apellido, email, url) VALUES ('andre25','Andrea', 'Cruz', 'ancruz25@gmail.com', 'https://image.flaticon.com/icons/png/512/1503/1503126.png');
+INSERT INTO `usuarios` (username,   nombre, apellido, email, url) VALUES ('andre25','Andrea', 'Cruz', 'ancruz25@gmail.com', 'https://www.stickpng.com/assets/images/585e4bd7cb11b227491c3397.png');
