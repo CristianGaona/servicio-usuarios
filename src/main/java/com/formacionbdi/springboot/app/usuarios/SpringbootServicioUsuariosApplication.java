@@ -10,5 +10,4 @@ public class SpringbootServicioUsuariosApplication {
 		SpringApplication.run(SpringbootServicioUsuariosApplication.class, args);
 	}
 
-	//Clase ejecución
 }
